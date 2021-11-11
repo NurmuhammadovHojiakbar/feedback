@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Arrow from "../../Assets/Icons/arrow-top.png"
 import Comment from "../../Assets/Icons/comment-icon.png"
 
 const FeedbackItem = ({feedback}) => {
 
-    let {likes} = feedback
-    const likeHandler = ()=>{
+    let [likes, setLikes] = useState(feedback.likes)
+    const likeHandler = (e)=>{
+        e.preventDefault();
+        if(e.target.classList.contains("active")){
+            e.target.classList.remove("active")
+            setLikes(likes - 1)
+        }else if(!e.target.classList.contains("active")){
+            e.target.classList.add("active")
+            setLikes(likes + 1)
+        }
     }
 
     return (
@@ -16,23 +25,24 @@ const FeedbackItem = ({feedback}) => {
             </header>
             <main className="feedback-item__main">
                 <div className="likes-wrapper">
-                    <button 
-                        className="likes"
+                    <a  
+                        href="/"
+                        className="likes-button"
                         onClick={likeHandler}    
                     >
-                        <img src={Arrow} alt="Arrow Icon"/>
+                        <img src={Arrow} alt="Arrow Icon" width="8" height="4"/>
                         <span>{likes}</span>
-                    </button>
+                    </a>
                 </div>
                 <div className="feedback-wrapper">
                     <h3 className="feedback-title">{ feedback.title }</h3>
                     <p className="feedback-body">{ feedback.body.slice(0,350) + "..." }</p>
                     <p className="feedback-type">{feedback.type}</p>
                 </div>
-                <p className="feedback-comment">
+                <Link to="/" className="feedback-comment">
                     <img src={Comment} alt="Comment Icon"/>
                     <pan>{feedback.comments.length}</pan>
-                </p>
+                </Link>
             </main>
         </li>
     );
