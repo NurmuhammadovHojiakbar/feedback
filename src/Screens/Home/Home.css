@@ -17,3 +17,24 @@
     flex-grow: 1;
     height: 1250px;
 }
+
+@media only screen and (max-width:900px){
+    .site-main__container{
+        flex-direction: column;
+    }
+
+    .site-main-left{
+        position: relative;
+        top: 0;
+        display: flex;
+        margin-bottom: 25px;
+        margin-right: 0;
+        max-width:100%;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .site-main-left{
+        flex-direction: column;
+    }
+}
