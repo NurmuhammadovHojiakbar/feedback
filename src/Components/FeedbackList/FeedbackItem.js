@@ -18,7 +18,7 @@ const FeedbackItem = ({feedback}) => {
     }
 
     return (
-        <li  className="feedback-item">
+        <li  className="feedback-item" style={{display: feedback.display}}>
             <header className="feedback-item__header">
                 <span className="feedback-image" style={{backgroundColor: feedback.imageColor}}></span>
                 <h2 className="feedback-name">{ feedback.muallif }</h2>

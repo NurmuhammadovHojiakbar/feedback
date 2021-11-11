@@ -1,17 +1,22 @@
 import React from 'react';
 import "./Feedback.css"
-import Data from "../../Data/Data"
 import FeedbackItem from './FeedbackItem';
+import { useFeedback } from '../../Contexts/FeedbackContext';
 
 const FeedbackList = () => {
+
+    const {feedbackdata} = useFeedback()
+
     return (
-        <ul className="feedback-list">
-            {
-                Data.map(f=>(
-                    <FeedbackItem feedback={f} />
-                ))
-            }
-        </ul>
+        <>
+            <ul className="feedback-list">
+                {
+                    feedbackdata?.map(f=>(
+                        <FeedbackItem feedback={f} />
+                    ))
+                }
+            </ul> 
+        </>
     );
 }
 

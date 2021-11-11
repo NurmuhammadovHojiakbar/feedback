@@ -1,7 +1,10 @@
 import React from 'react';
 import "./FilterPostType.css"
+import {useFeedback} from "../../../Contexts/FeedbackContext"
 
 const FilterPostType = () => {
+
+    const {feedbackdata,setFeedbackdata} = useFeedback()
 
     const FilterTypeHandler = (e)=>{
         e.preventDefault();
@@ -10,6 +13,19 @@ const FilterPostType = () => {
             l.classList.remove("active")
         })
         e.target.classList.add("active")
+
+        const newData = feedbackdata?.map(d=>{
+            if(e.target.textContent === "Barchasi"){
+                return {...d, display: "block"}
+            }else{
+                if(e.target.textContent === d.type){
+                    return {...d, display: "block"}
+                }if(e.target.textContent !== d.type){
+                    return {...d, display: "none"}
+                }
+            }
+        })
+        setFeedbackdata(newData)
     }
 
     return (
