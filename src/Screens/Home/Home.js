@@ -7,12 +7,13 @@ import RoadmapInfo from '../../Components/RoadmapInfo/RoadmapInfo';
 function Home() {
     return (
         <main className="site-main">
-            <div className="container">
+            <div className="site-main__container container">
                 <section className="site-main-left">
                     <UserAccount />
                     <FilterPostType />
                     <RoadmapInfo />
                 </section>
+                <section className="site-main-board"></section>
             </div>
         </main>
     );

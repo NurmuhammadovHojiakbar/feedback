@@ -3,6 +3,21 @@
     padding-bottom: 50px;
 }
 
+.site-main__container{
+    display: flex;
+}
+
 .site-main-left{
+    position: sticky;
+    top: 50px;
+    align-self: flex-start;
     max-width: 250px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.site-main-board{
+    flex-grow: 1;
+    height: 1250px;
+    background-color: red;
 }
