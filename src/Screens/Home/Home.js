@@ -4,6 +4,7 @@ import UserAccount from '../../Components/UserAccount/UserAccount';
 import FilterPostType from '../../Components/FilterComponents/FilterPostType/FilterPostType';
 import RoadmapInfo from '../../Components/RoadmapInfo/RoadmapInfo';
 import BoardHeader from '../../Components/BoardHeader/BoardHeader';
+import FeedbackList from '../../Components/FeedbackList/FeedbackList';
 
 function Home() {
     return (
@@ -16,6 +17,7 @@ function Home() {
                 </section>
                 <section className="site-main-board">
                     <BoardHeader />
+                    <FeedbackList />
                 </section>
             </div>
         </main>

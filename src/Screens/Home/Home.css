@@ -1,10 +1,7 @@
-.site-main{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .site-main__container{
     display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .site-main-left{
@@ -19,5 +16,4 @@
 .site-main-board{
     flex-grow: 1;
     height: 1250px;
-    background-color: red;
 }
