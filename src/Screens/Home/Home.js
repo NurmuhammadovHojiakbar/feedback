@@ -3,6 +3,7 @@ import "./Home.css"
 import UserAccount from '../../Components/UserAccount/UserAccount';
 import FilterPostType from '../../Components/FilterComponents/FilterPostType/FilterPostType';
 import RoadmapInfo from '../../Components/RoadmapInfo/RoadmapInfo';
+import BoardHeader from '../../Components/BoardHeader/BoardHeader';
 
 function Home() {
     return (
@@ -13,7 +14,9 @@ function Home() {
                     <FilterPostType />
                     <RoadmapInfo />
                 </section>
-                <section className="site-main-board"></section>
+                <section className="site-main-board">
+                    <BoardHeader />
+                </section>
             </div>
         </main>
     );

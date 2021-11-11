@@ -1,0 +1,26 @@
+.board-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: #373f68;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.board-header__suggestion{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+}
+
+.board-header__suggestion img{
+    margin-right: 16px;
+}

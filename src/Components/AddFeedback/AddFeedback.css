@@ -1,0 +1,11 @@
+.add-feedback{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f2f4fe;
+    background: #ad1fea;
+    border-radius: 10px;
+}
