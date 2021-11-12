@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {useUser} from "../../Contexts/UserContext"
 import Arrow from "../../Assets/Icons/arrow-top.png"
 import Comment from "../../Assets/Icons/comment-icon.png"
 
 const FeedbackItem = ({feedback}) => {
+
+    const { user } = useUser();
 
     let [likes, setLikes] = useState(feedback.likes)
     const likeHandler = (e)=>{
@@ -28,7 +31,7 @@ const FeedbackItem = ({feedback}) => {
                     <a  
                         href="/"
                         className="likes-button"
-                        onClick={likeHandler}    
+                        onClick={user? likeHandler : (e)=>e.preventDefault()}    
                     >
                         <img src={Arrow} alt="Arrow Icon" width="8" height="4"/>
                         <span>{likes}</span>
