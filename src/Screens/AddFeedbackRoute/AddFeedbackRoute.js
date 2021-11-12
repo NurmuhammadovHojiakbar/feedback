@@ -12,6 +12,7 @@ const AddFeedbackRoute = () => {
     const colors = ["#E59934","#A9333A", "#1E5128","#193498", "#AB6D23", "#F0A500","#B24080","#1DB9C3"]
     const titleRef = useRef();
     const detailRef = useRef();
+    const typeRef = useRef();
     const history = useHistory();
 
 
@@ -27,7 +28,7 @@ const AddFeedbackRoute = () => {
             imageColor: colors[Math.floor(Math.random()*colors.length)],
             title: titleRef.current.value,
             body: detailRef.current.value,
-            type: "React",
+            type: typeRef.current.value,
             display: "block",
             likes: 0,
             comments: []
@@ -48,7 +49,7 @@ const AddFeedbackRoute = () => {
                 <form 
                     className="create-new-feedback__form"
                     method="POST"
-                    onSubmit={addNewFeedback}
+                    onSubmit={user? addNewFeedback : (e)=>e.preventDefault()}
                 >
                     <div className="new-feedback-wrapper">
                         <label htmlFor="title">
@@ -63,6 +64,19 @@ const AddFeedbackRoute = () => {
                             required
                             ref={titleRef}    
                         />
+                    </div>
+                    <div className="new-feedback-wrapper">
+                        <label htmlFor="title">
+                            <span className="new-feedback-title">Fikr-Mulohaza sarlavhasi</span>
+                            <span className="new-feedback-detail">Qisqa va ma'noli sarlavha yozing</span>
+                        </label>
+                        <select className="new-feedback-type" ref={typeRef}>
+                            <option value="React">React</option>
+                            <option value="Vue">Vue</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Featur">Feature</option>
+                        </select>
                     </div>
                     <div className="new-feedback-wrapper">
                         <label htmlFor="detail">

@@ -98,6 +98,8 @@
 }
 
 .feedback-type{
+    margin-top: 0;
+    margin-bottom: 0;
     display: inline-block;
     background: #f2f4ff;
     border-radius: 10px;
@@ -119,6 +121,7 @@
     text-align: center;
     letter-spacing: -0.222222px;
     color: #3A4374;
+    margin-left: auto;
 }
 .feedback-comment img{
     margin-right: 8px;

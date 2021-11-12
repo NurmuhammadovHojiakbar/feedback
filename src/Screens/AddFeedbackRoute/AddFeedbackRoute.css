@@ -60,7 +60,13 @@
     color: #647196;
 }
 
+.new-feedback-type{
+    padding: 12px 24px;
+}
 .feedback-info-textarea{
+    padding: 5px;
+}
+.new-feedback-type,.feedback-info-textarea{
     resize: none;
     background: #f7f8fd;
     border-color: #f7f8fd;
