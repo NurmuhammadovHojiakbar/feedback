@@ -4,7 +4,7 @@ import { useUser } from '../../Contexts/UserContext';
 import "./UserAccount.css"
 
 function UserAccount() {
-
+    const colors = ["#E59934","#A9333A", "#1E5128","#193498", "#AB6D23", "#F0A500","#B24080","#1DB9C3"]
     const {user,setUser} = useUser();
 
     return (
@@ -20,6 +20,7 @@ function UserAccount() {
                             <span>Log In</span>
                         </Link> : 
                         <div>
+                            <span className="user-name-image" style={{backgroundColor: colors[Math.floor(Math.random()*colors.length)]}}></span>
                             <h2 className="user-name">{ user.name }</h2>
                         </div>
                 }

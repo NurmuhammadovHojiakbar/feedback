@@ -1,16 +1,42 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import "./AddFeedbackRoute.css"
 import plusimage from "../../Assets/Icons/plus.png"
 import GoBack from '../../Components/GoBack/GoBack';
 import { Link } from 'react-router-dom';
 import {useUser} from "../../Contexts/UserContext"
+import {useFeedback} from "../../Contexts/FeedbackContext"
 
 const AddFeedbackRoute = () => {
 
-    const {user,setUser} = useUser();
+    const colors = ["#E59934","#A9333A", "#1E5128","#193498", "#AB6D23", "#F0A500","#B24080","#1DB9C3"]
+    const titleRef = useRef();
+    const detailRef = useRef();
+    const history = useHistory();
+
+
+    const {user} = useUser();
+    const {feedbackdata, setFeedbackdata} = useFeedback();
 
     const addNewFeedback=(e)=>{
         e.preventDefault();
+
+        setFeedbackdata([...feedbackdata,{
+            id: Math.random(),
+            muallif: user.name,
+            imageColor: colors[Math.floor(Math.random()*colors.length)],
+            title: titleRef.current.value,
+            body: detailRef.current.value,
+            type: "React",
+            display: "block",
+            likes: 0,
+            comments: []
+        }])
+
+        titleRef.current.value = ""
+        detailRef.current.value = ""
+
+        history.push("/")
     }
 
     return (
@@ -34,7 +60,8 @@ const AddFeedbackRoute = () => {
                             name="title" 
                             id="title" 
                             rows="2" 
-                            required    
+                            required
+                            ref={titleRef}    
                         />
                     </div>
                     <div className="new-feedback-wrapper">
@@ -47,7 +74,8 @@ const AddFeedbackRoute = () => {
                             name="detail" 
                             id="detail" 
                             rows="4" 
-                            required    
+                            required  
+                            ref={detailRef}  
                         />
                     </div>
                     <div className="new-feedback-wrapper new-feedback-wrapper__buttons">
