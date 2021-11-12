@@ -22,7 +22,7 @@ const BoardHeader = () => {
         <header className="board-header">
             <h2 className="board-header__suggestion">
                 <img src={Bulb} alt="Bulb" />
-                <span>{ currentdata?.length } Suggestions</span>
+                <span>{ currentdata?.length } ta Fikr-mulahaza mavjud</span>
             </h2>
             {user && <AddFeedback />}
         </header>

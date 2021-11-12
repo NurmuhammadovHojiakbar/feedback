@@ -55,7 +55,7 @@
 @media only screen and (max-width:650px){
     .filter-type-wrapper{
         justify-content: center;
-        margin-bottom: 24px;
+        order: 1;
         margin-right: 0;
     }
 }

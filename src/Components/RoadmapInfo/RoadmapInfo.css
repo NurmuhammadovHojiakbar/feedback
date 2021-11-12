@@ -73,3 +73,9 @@
 .roadmap-info__text-number{
     margin-left: 20px;
 }
+
+@media only screen and (max-width:650px){
+    .roadmap-info{
+        margin-bottom: 24px;
+    }
+}

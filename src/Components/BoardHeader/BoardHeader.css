@@ -24,3 +24,20 @@
 .board-header__suggestion img{
     margin-right: 16px;
 }
+
+@media only screen and (max-width:400px){
+    .board-header{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .board-header__suggestion{
+        margin-right: 0;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+
+    .board-header .add-feedback{
+        align-self: flex-end;
+    }
+}
