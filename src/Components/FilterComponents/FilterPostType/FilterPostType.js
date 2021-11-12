@@ -24,6 +24,7 @@ const FilterPostType = () => {
                     return {...d, display: "none"}
                 }
             }
+            return feedbackdata
         })
         setFeedbackdata(newData)
     }
