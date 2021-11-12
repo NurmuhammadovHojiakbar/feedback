@@ -12,7 +12,7 @@ const BoardHeader = () => {
     const [currentdata, setCurrentdata] = useState(null)
 
     useEffect(()=>{
-        const currentData = feedbackdata.filter(f =>{
+        const currentData = feedbackdata?.filter(f =>{
             return f.display === "block"
         })
         setCurrentdata(currentData)
