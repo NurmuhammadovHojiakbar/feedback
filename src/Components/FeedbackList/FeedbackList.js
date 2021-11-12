@@ -11,7 +11,7 @@ const FeedbackList = () => {
     
 
     useEffect(()=>{
-        if(feedbackdata.find(f=>{
+        if(feedbackdata?.find(f=>{
             return f.display === "block"
         })){
             return setNotFound(false)
