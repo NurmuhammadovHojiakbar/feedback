@@ -14,7 +14,7 @@ const FilterPostType = () => {
         })
         e.target.classList.add("active")
 
-        const newData = feedbackdata?.map(d=>{
+        const newData = feedbackdata?.forEach(d=>{
             if(e.target.textContent === "Barchasi"){
                 return {...d, display: "block"}
             }else{
