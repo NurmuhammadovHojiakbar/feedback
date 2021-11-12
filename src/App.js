@@ -19,13 +19,15 @@ const Provider = ({ children })=>{
 
 function App() {
     return (
-        <Provider>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={Log} />
-                <Route exact path="/add-feedback" component={AddFeedbackRoute} />
-            </Switch>
-        </Provider>
+        <>
+            <Provider>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/login" component={Log} />
+                    <Route exact path="/add-feedback" component={AddFeedbackRoute} />
+                </Switch>
+            </Provider>
+        </>
     ); 
 }
 
