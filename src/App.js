@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import { FeedbackProvider } from './Contexts/FeedbackContext';
 import { UserProvider } from './Contexts/UserContext';
+import AddFeedbackRoute from './Screens/AddFeedbackRoute/AddFeedbackRoute';
 import Home from "./Screens/Home/Home"
 import Log from './Screens/Log/Log';
 
@@ -22,6 +23,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={Log} />
+                <Route exact path="/add-feedback" component={AddFeedbackRoute} />
             </Switch>
         </Provider>
     ); 

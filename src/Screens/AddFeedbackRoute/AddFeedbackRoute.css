@@ -1,0 +1,38 @@
+.add-feedback-container{
+    max-width: 540px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px 20px;
+}
+
+.go-back-container{
+    margin-bottom: 48px;
+}
+
+.create-new-feedback{
+    padding: 50px 40px 40px;
+    position: relative;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.create-new-feedback__img{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    padding: 20px;
+    background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+}
+
+.create-new-feedback__title{
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    color: #3A4374;
+}
