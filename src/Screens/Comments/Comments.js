@@ -4,7 +4,6 @@ import "./Comments.css"
 import GoBack from "../../Components/GoBack/GoBack"
 import {useUser} from "../../Contexts/UserContext"
 import {useFeedback} from "../../Contexts/FeedbackContext"
-import Arrow from "../../Assets/Icons/arrow-top.png"
 import Comment from "../../Assets/Icons/comment-icon.png"
 import CommentItem from './CommentItem';
 
@@ -15,6 +14,8 @@ const Comments = () => {
     const {user} = useUser()
     const [feedback, setFeedback] = useState()
     const {feedbackdata} = useFeedback()
+
+    console.log(user)
 
     useEffect(()=>{
         const seperatedata = feedbackdata.find(d=>{
