@@ -128,6 +128,10 @@
 }
 
 @media only screen and (max-width:650px){
+    .feedback-wrapper{
+        width: 100%;
+        margin-bottom: 20px;
+    }
     .feedback-item__main{
         flex-wrap: wrap;
     }
