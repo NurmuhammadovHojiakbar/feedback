@@ -19,7 +19,7 @@ const NotFound = () => {
                     height="140"
                 />
                 <h2 className="not-found__caption">Bu mavzuda fikr-mulohazalar mavjud emas!</h2>
-                <p className="not-found__text">Bu mavzuda fikr-mulohaza mavjud emas, { user && "lekin siz qo'sha olasiz!" } { !user && "agar qo'shishni hohlasangiz iltimos registratsiyadan o'ting!" }</p>
+                <p className="not-found__text">Bu mavzuda fikr-mulohaza mavjud emas, { user && "lekin siz qo'sha olasiz!" } { !user && "agar qo'shishni hohlasangiz iltimos ro'yxatdan o'ting!" }</p>
                 { user && <AddFeedback /> }
             </div>
         </div>
