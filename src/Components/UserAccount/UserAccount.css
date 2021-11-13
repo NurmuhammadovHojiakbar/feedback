@@ -77,6 +77,11 @@
         align-items: center;
         flex-wrap: wrap;
     }
+
+    .user-account-wrapper div{
+        flex-grow: 1;
+    }
+
     .user-info{
         margin-right: 25px;
     }
