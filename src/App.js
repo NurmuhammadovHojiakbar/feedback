@@ -4,6 +4,7 @@ import "./App.css";
 import { FeedbackProvider } from './Contexts/FeedbackContext';
 import { UserProvider } from './Contexts/UserContext';
 import AddFeedbackRoute from './Screens/AddFeedbackRoute/AddFeedbackRoute';
+import Comments from './Screens/Comments/Comments';
 import Home from "./Screens/Home/Home"
 import Log from './Screens/Log/Log';
 
@@ -25,6 +26,7 @@ function App() {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Log} />
                     <Route exact path="/add-feedback" component={AddFeedbackRoute} />
+                    <Route exact path="/comments/:comments" component={Comments} />
                 </Switch>
             </Provider>
         </>

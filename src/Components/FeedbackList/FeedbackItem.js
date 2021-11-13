@@ -42,7 +42,7 @@ const FeedbackItem = ({feedback}) => {
                     <p className="feedback-body">{ feedback.body.slice(0,350) + "..." }</p>
                     <p className="feedback-type">{feedback.type}</p>
                 </div>
-                <Link to="/" className="feedback-comment">
+                <Link to={`/comments/${feedback.title}`} className="feedback-comment">
                     <img src={Comment} alt="Comment Icon"/>
                     <pan>{feedback.comments.length}</pan>
                 </Link>

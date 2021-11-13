@@ -1,0 +1,14 @@
+.comments-wrapper{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.comments-header{
+    margin-bottom: 24px;
+}
+
+.user-comment{
+    background-color: #fff;
+    padding: 28px 32px;
+    border-radius: 10px;
+}
