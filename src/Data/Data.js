@@ -10,7 +10,20 @@ const Data = {
             display: "block",
             likes: 6,
             comments: [
-                {},{},
+                {
+                    id: 1.1,
+                    muallif: "Hojiakbar",
+                    imageColor: "#c36a2d",
+                    body: "Function based yaxshiroq variant. Hooklar bilan ishiz ancha tez bitadi va qulay ham:)",
+                    replies: [],
+                },
+                {
+                    id: 1.2,
+                    muallif: "Otabek O'ktamov",
+                    imageColor: "#39a388",
+                    body: "Ikkisini ham o'rganing. shunda yaxshisini o'zingiz topib olasiz!",
+                    replies: [],
+                },
             ]
         },
         {
@@ -42,7 +55,13 @@ const Data = {
             display: "block",
             likes: 10,
             comments: [
-                {},{},{},{},{},{},{},
+                {
+                    id: 2.1,
+                    muallif: "Hojiakbar",
+                    imageColor: "#c36a2d",
+                    body: "Aka PHP yaxshi tilu lekin zamon NodeJS nikida:)",
+                    replies: [],
+                },
             ]
         },
         {
@@ -55,7 +74,20 @@ const Data = {
             display: "block",
             likes: 2,
             comments: [
-                {},{},{},{},
+                {
+                    id: 3.1,
+                    muallif: "Iqboljon",
+                    imageColor: "#c36a2d",
+                    body: "Google aka nima deyapti aka",
+                    replies: [],
+                },
+                {
+                    id: 3.2,
+                    muallif: "Iqboljon",
+                    imageColor: "#c36a2d",
+                    body: "Futbollni ko'ryapsizmi? zo'r bo'lyaptiyu",
+                    replies: [],
+                },
             ]
         },
     ]

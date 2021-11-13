@@ -6,25 +6,15 @@ import {useUser} from "../../Contexts/UserContext"
 import {useFeedback} from "../../Contexts/FeedbackContext"
 import Arrow from "../../Assets/Icons/arrow-top.png"
 import Comment from "../../Assets/Icons/comment-icon.png"
+import CommentItem from './CommentItem';
 
 const Comments = () => {
+
+    const {comments} = useParams()
 
     const {user} = useUser()
     const [feedback, setFeedback] = useState()
     const {feedbackdata} = useFeedback()
-    const {comments} = useParams()
-    const [likes, setLikes] = useState(feedback?.likes)
-    
-    const likeHandler = (e)=>{
-        e.preventDefault();
-        if(e.target.classList.contains("active")){
-            e.target.classList.remove("active")
-            setLikes(likes - 1)
-        }else if(!e.target.classList.contains("active")){
-            e.target.classList.add("active")
-            setLikes(likes + 1)
-        }
-    }
 
     useEffect(()=>{
         const seperatedata = feedbackdata.find(d=>{
@@ -40,7 +30,7 @@ const Comments = () => {
                 <header className="comments-header">
                     <GoBack />
                 </header>
-                <main>
+                <main className="comments-main">
                     <div className="user-comment">
                         <header className="feedback-item__header">
                             <span className="feedback-image" style={{backgroundColor: feedback?.imageColor}}></span>
@@ -61,6 +51,16 @@ const Comments = () => {
                                 <pan>{feedback?.comments.length}</pan>
                             </Link>
                         </main>
+                    </div>
+                    <div className="user-comments__wrapper">
+                        <h2>{feedback?.comments.length} ta izoh mavjud</h2>
+                        <ul className="user-comments__list">
+                            {
+                                feedback?.comments.map(c=>{
+                                    return <CommentItem comment={c} />
+                                })
+                            }
+                        </ul>
                     </div>
                 </main>
                 <footer>
