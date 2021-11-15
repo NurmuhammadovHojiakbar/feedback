@@ -46,6 +46,7 @@ const Comments = () => {
                         })
         setFeedbackdata(comment)
         textareaRef.current.value = ""
+        setCommentLength(250)
     }
 
     useEffect(()=>{
