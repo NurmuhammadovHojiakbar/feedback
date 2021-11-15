@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect,useRef,useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import "./Comments.css"
 import GoBack from "../../Components/GoBack/GoBack"
@@ -10,15 +10,46 @@ import CommentItem from './CommentItem';
 const Comments = () => {
 
     const {comments} = useParams()
-
     const {user} = useUser()
+    const {feedbackdata, setFeedbackdata} = useFeedback()
     const [feedback, setFeedback] = useState()
-    const {feedbackdata} = useFeedback()
+    const [commentLength, setCommentLength] = useState(250)
+    const [stop, setStop] = useState(false)
+    const textareaRef = useRef()
 
-    console.log(user)
+    const CommentHandler = (e)=>{
+        if(e.target.value.length>0){
+            setCommentLength(250 - e.target.value.length)
+            setStop(false)
+        }if(e.target.value.length === 250){
+            setStop(true)
+        }
+    }
+
+    const PostCommentHandler = (e)=>{
+        e.preventDefault();
+        const comment = feedbackdata?.map(d=>{
+                            if(d.title === comments){
+                                return {...d, comments:[
+                                    ...d.comments, {
+                                        id: Math.random(),
+                                        muallif: user.name,
+                                        imageColor: "#c36a2d",
+                                        body: textareaRef.current.value,
+                                        replies: [],
+                                    }
+                                ]}
+                            }if(d.title !== comments){
+                                return d
+                            }
+                            return feedbackdata
+                        })
+        setFeedbackdata(comment)
+        textareaRef.current.value = ""
+    }
 
     useEffect(()=>{
-        const seperatedata = feedbackdata.find(d=>{
+        const seperatedata = feedbackdata?.find(d=>{
             return d.title === comments
         })
 
@@ -64,9 +95,29 @@ const Comments = () => {
                         </ul>
                     </div>
                 </main>
+                {!user && <p className="feedback-body" style={{textAlign:'center'}}>Ro'yxatdan o'ting va izoh qoldiring!</p>}
+                {user && 
                 <footer>
-
-                </footer>
+                    <form class="post-comment-form" onSubmit={PostCommentHandler}>
+                        <label className="add-comment__title" htmlFor="comment">Add Comment</label>
+                        <textarea 
+                            className="add-comment__input feedback-info-textarea"
+                            name="comment" 
+                            id="comment"
+                            required
+                            placeholder="Type your comment here"
+                            rows="4"
+                            onInput={CommentHandler}
+                            maxLength="250"
+                            ref={textareaRef}
+                            />
+                        {stop && <span className="warning-info">No more you can't</span>}
+                        <div className="post-comment-wrapper">
+                            <span className="comment-length-info">{commentLength} Characters left</span>
+                            <button className="post-comment__button add-feedback" type="submit">Post Comment</button>
+                        </div>
+                    </form>
+                </footer>}
             </div>
         </div>
     );
