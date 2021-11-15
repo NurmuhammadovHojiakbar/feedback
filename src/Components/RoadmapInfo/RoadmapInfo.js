@@ -7,7 +7,7 @@ const RoadmapInfo = () => {
         <div className="roadmap-info">
             <header className="roadmap-info__header">
                 <h2 className="roadmap-info__header-caption">Roadmap</h2>
-                <Link className="roadmap-info__header-link" to="/roadmap">View</Link>
+                <Link className="roadmap-info__header-link" to="/">View</Link>
             </header>
             <ul className="roadmap-info__list">
                 <li className="roadmap-info__item">
