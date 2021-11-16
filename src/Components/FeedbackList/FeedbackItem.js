@@ -39,7 +39,7 @@ const FeedbackItem = ({feedback}) => {
                 </div>
                 <div className="feedback-wrapper">
                     <h3 className="feedback-title">{ feedback.title }</h3>
-                    <p className="feedback-body">{ feedback.body}</p>
+                    <p className="feedback-body">{ feedback.body.slice(0,350) + "..." }</p>
                     <p className="feedback-type">{feedback.type}</p>
                 </div>
                 <Link to={`/comments/${feedback.title}`} className="feedback-comment">
