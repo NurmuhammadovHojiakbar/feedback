@@ -15,7 +15,20 @@ const Data = {
                     muallif: "Hojiakbar",
                     imageColor: "#c36a2d",
                     body: "Function based yaxshiroq variant. Hooklar bilan ishiz ancha tez bitadi va qulay ham:)",
-                    replies: [],
+                    replies: [
+                        {
+                            id: 1.111,
+                            muallif: "Khanzo",
+                            imageColor: "#3d0000",
+                            body: "++",
+                        },
+                        {
+                            id: 1.112,
+                            muallif: "Hojiakbar",
+                            imageColor: "#c36a2d",
+                            body: "Albatta hooklar yaxshi tanlovda!",
+                        }
+                    ],
                 },
                 {
                     id: 1.2,

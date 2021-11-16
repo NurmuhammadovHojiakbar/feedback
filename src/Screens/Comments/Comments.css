@@ -134,3 +134,10 @@
 .reply-button__submit{
     background-color: #ad1fea;
 }
+
+.replies-list{
+    list-style-type: none;
+    margin: 25px 0 0 25px;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+}
