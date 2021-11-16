@@ -6,6 +6,7 @@ const CommentItem = ({comment}) => {
             <div className="feedback-item__header">
                 <span className="feedback-image" style={{backgroundColor: comment.imageColor}}></span>
                 <h2 className="feedback-name">{ comment.muallif }</h2>
+                <button className="reply-button">Reply</button>
             </div>
             <p className="feedback-body">{ comment.body }</p>
         </li>

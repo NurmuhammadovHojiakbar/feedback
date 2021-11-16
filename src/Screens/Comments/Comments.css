@@ -75,3 +75,15 @@
     line-height: 22px;
     color:red;
 }
+
+.reply-button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    color: #4661E6;
+}
