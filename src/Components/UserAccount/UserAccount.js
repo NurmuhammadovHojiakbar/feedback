@@ -21,7 +21,7 @@ function UserAccount() {
                         </Link> : 
                         <div>
                             <span className="user-name-image" style={{backgroundColor: colors[Math.floor(Math.random()*colors.length)]}}></span>
-                            <h2 className="user-name">{ user.name }</h2>
+                            <h2 className="user-name">{user.name.length > 13 && (user.name.slice(0,13) + "...")} {user.name.length <= 13 && user.name}</h2>
                         </div>
                 }
             </div>

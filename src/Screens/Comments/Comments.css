@@ -87,3 +87,50 @@
     line-height: 19px;
     color: #4661E6;
 }
+
+.reply-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.reply-form__input{
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+.reply-form__buttons{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.reply-form-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f2f4fe;
+}
+
+.reply-form-button:hover{
+    opacity: 0.7;
+}
+
+.reply-form-button:active{
+    opacity: 0.5;
+}
+
+.reply-button__cancel{
+    margin-right: 15px;
+    background-color: #3A4374;
+}
+
+.reply-button__submit{
+    background-color: #ad1fea;
+}
